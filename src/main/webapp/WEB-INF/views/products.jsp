@@ -13,7 +13,13 @@
     <link rel="stylesheet" href="webjars/bootstrap/5.1.3/css/bootstrap.min.css"/>
 </head>
 <body>
-    <div class="container">
+    <c:if test="${not empty error}">
+        <div class="alert alert-danger" role="alert">
+            ${error}
+        </div>
+    </c:if>
+
+    <div class="container-sm">
         <br>
         <form method="post" action="products">
             <div class="mb-3">
